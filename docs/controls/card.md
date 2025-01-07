@@ -112,5 +112,13 @@ Defaults to `None`.
 ### `variant`
 
 Defines the card variant to be used.
+We have Three types of the CardVariant as bellow:
+-CardVariant.Elevated //A card variant with an elevation.
+-CardVariant.Field//A card variant with a filled background.
+-CardVariant.Outlined//A card variant with an outlined border.
+
+
+
+
 
 Value is of type [`CardVariant`](/docs/reference/types/cardvariant) and defaults to `CardVariant.ELEVATED`.
