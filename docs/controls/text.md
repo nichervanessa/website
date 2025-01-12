@@ -436,3 +436,30 @@ Font weight.
 
 Value is of type [`FontWeight`](/docs/reference/types/fontweight) and defaults to `FontWeight.NORMAL`.
 
+Create Custome Text Class To Inherit Easily for every:
+from flet import *
+
+
+
+class CustomText(Text):
+    def __init__(self, value = None, spans = None, text_align = None, font_family = None, size = None, weight = None, italic = None, style = None, theme_style = None, max_lines = None, overflow = None, selectable = None, no_wrap = None, color = None, bgcolor = None, semantics_label = None, show_selection_cursor = None, enable_interactive_selection = None, selection_cursor_width = None, selection_cursor_height = None, selection_cursor_color = None, on_tap = None, on_selection_change = None, ref = None, key = None, width = None, height = None, left = None, top = None, right = None, bottom = None, expand = None, expand_loose = None, col = None, opacity = None, rotate = None, scale = None, offset = None, aspect_ratio = None, animate_opacity = None, animate_size = None, animate_position = None, animate_rotation = None, animate_scale = None, animate_offset = None, on_animation_end = None, tooltip = None, badge = None, visible = None, disabled = None, data = None, rtl = None):
+        super().__init__(value, spans, text_align, font_family, size, weight, italic, style, theme_style, max_lines, overflow, selectable, no_wrap, color, bgcolor, semantics_label, show_selection_cursor, enable_interactive_selection, selection_cursor_width, selection_cursor_height, selection_cursor_color, on_tap, on_selection_change, ref, key, width, height, left, top, right, bottom, expand, expand_loose, col, opacity, rotate, scale, offset, aspect_ratio, animate_opacity, animate_size, animate_position, animate_rotation, animate_scale, animate_offset, on_animation_end, tooltip, badge, visible, disabled, data, rtl)
+        self.font_family="Helvetica"
+        self.size=20
+        self.color=Colors.RED
+        self.weight=FontWeight.BOLD
+        self.badge=Badge(bgcolor=Colors.GREEN)
+        self.selectable=True
+        self.bgcolor=Colors.AMBER
+        self.italic=True
+        #self.rotate=Rotate(angle=180,alignment=alignment.center)
+        #self.scale=Scale(alignment=alignment.center,scale=0.4)
+        self.max_lines=1
+        self.overflow=TextOverflow.ELLIPSIS
+        self.theme_style=TextThemeStyle.HEADLINE_LARGE
+        self.spans=[TextSpan(
+            "use span",TextStyle(weight=FontWeight.BOLD)
+        )]
+        self.no_wrap=True
+        self.rtl=True
+        
